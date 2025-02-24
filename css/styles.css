@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Roboto; 
+    font-family: Roboto;
     margin: 0;
     padding: 0;
     background-color: #b9cfbe;
@@ -8,25 +8,29 @@ body {
     font-size: 17px;
 }
 
-header, footer {
+header {
     background-color: #5f7965;
     color: white;
     text-align: center;
     padding: 20px;
-    font-family: Roboto; /* Added font-family */
+    font-family: Roboto;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: Roboto;
+    position: fixed; /* keeps the footer at the bottom */
+    bottom: 0; 
+    width: 100%; 
     background-color: #243127;
     color: white;
     text-align: center;
     padding: 10px;
-    bottom: auto;
+    font-family: Roboto;
 }
+
+section:last-of-type{ /* extra padding to prevent overlapping */
+    padding-bottom: 50px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -46,6 +50,7 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
 section {
     padding: 20px;
     margin: 20px;
@@ -73,5 +78,9 @@ h2 {
     section {
         padding: 10px;
         margin: 10px;
+    }
+
+    section:last-of-type { /* extra padding to prevent overlapping when viewing on a mobile device */
+        padding-bottom: 80px;
     }
 }
