@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const projectID = button.getAttribute('data-project');
-            const dtails = document.querySelector(`details-${projectID}`);
+            const details = document.getElementById(`details-${projectID}`);
 
             if (details.style.display === 'none' || details.style.display === '') {
                 details.style.display = 'block';
