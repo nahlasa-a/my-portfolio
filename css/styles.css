@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /* General Styles */
 body {
-    font-family: Roboto;
+    font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #b9cfbe;
@@ -14,7 +13,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 footer {
@@ -25,7 +24,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 section:last-of-type{ /* prevent overlapping */
@@ -148,7 +147,7 @@ button[type="submit"] { /* submit button */
     cursor: pointer;
 }
 
-button[type="submit"] :hover{
+button[type="submit"]:hover{
     background-color: #4c7656;
 }
 
@@ -194,6 +193,6 @@ textarea {
     }
 
     .projects-container {
-        gap: 20px;
+        gap: 10px;
     }
 }

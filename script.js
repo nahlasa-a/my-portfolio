@@ -26,7 +26,7 @@ form.addEventListener('submit', (event) => {
         isValid = false;
         name.placeholder = 'Name is required';
     } else {
-        nameplaceholder = 'Enter your name';
+        name.placeholder = 'Enter your name';
     }
 
     const email = document.getElementById('email');
