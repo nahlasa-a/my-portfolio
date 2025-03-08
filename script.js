@@ -2,16 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.show-details');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            const projectID = button.getAttribute('data-project-id');
-            const projectDetails = document.querySelector(`#project-details-${projectID}`);
+            const projectID = button.getAttribute('data-project');
+            const dtails = document.querySelector(`details-${projectID}`);
 
-            if (projectDetails.style.display === 'block') {
-                projectDetails.style.display = 'none';
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+                button.textContent = 'Hide details';
             } else {
-                projectDetails.style.display = 'block';
+                details.style.display = 'none';
+                button.textContent = 'Show details';
             }
         });
-    })
+    }); 
 });
 
 const form = document.getElementById('contact-form');
@@ -20,32 +22,28 @@ form.addEventListener('submit', (event) => {
     let isValid = true;
 
     const name = document.getElementById('name');
+     if (name.value.trim() === '') {
+        isValid = false;
+        name.placeholder = 'Name is required';
+    } else {
+        nameplaceholder = 'Enter your name';
+    }
+
     const email = document.getElementById('email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+            email.placeholder = 'Enter a valid email address';
+            isValid = false;
+        } else {
+            email.placeholder = 'Enter your email';
+    }
+    
     const message = document.getElementById('message');
-
-    const nameError = document.getElementById('name-error');
-    const emailError = document.getElementById('email-error');
-    const messageError = document.getElementById('message-error');
-
-    if (name.value.trim() === '') {
-        isValid = false;
-        nameError.textContent = 'Name is required';
-    } else {
-        nameError.textContent = '';
-    }
-
-    if (email.value.trim() === '') {
-        isValid = false;
-        emailError.textContent = 'Email is required';
-    } else {
-        emailError.textContent = '';
-    }
-
     if (message.value.trim() === '') {
         isValid = false;
-        messageError.textContent = 'Message is required';
+        message.placeholder = 'Message is required';
     } else {
-        messageError.textContent = '';
+        message.placeholder = 'Enter your message';
     }
 
     if (isValid) {

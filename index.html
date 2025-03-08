@@ -35,7 +35,7 @@
         <h2>My Projects</h2>
         <div class="projects">
             <div class="project">
-                <h3>Project 1: Client Registration Form</h3>
+                <h3>Client Registration Form</h3>
                 <img src="https://i.pinimg.com/736x/7b/06/f4/7b06f4bb3cda45e2273a06004b809968.jpg" alt="Project 1: Client Registration Form">
                 <p>I created a user registration form which allows the computer to suggest text answers, if the user information - such as contact information & address -  is saved on the computer.</p>
                 <button class="show-details" data-project="1">Show Details</button>
@@ -47,7 +47,7 @@
 
         </div>
             <div class="project">
-                <h3>Project 2: My Bakery Website</h3>
+                <h3>My Bakery Website</h3>
                 <img src="https://i.pinimg.com/736x/b4/95/5e/b4955eda031886ed0de166554108feba.jpg" alt="Project 2: Bakery Website">
                 <p>Built a basic website for my at-home bakery business. The website included a small introduction, sample menu gallery, and the business contact information.</p>
                 <button class="show-details" data-project="2">Show Details</button>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="project">
-            <h3>Project 3: Interactive Quiz - Baking</h3>
+            <h3>Interactive Quiz - Baking</h3>
             <img src="https://i.pinimg.com/736x/1a/25/10/1a251079859fe435e820fb1f355ad6e4.jpg" alt="Project 3: Interactive quiz - baking">
             <p>Created an interactive quiz which quizzes the user on baking related topics, such as dough lamination, flour types, and geographical facts regarding pastries.</p>
             <button class="show-details" data-project="3">Show Details</button>
@@ -70,16 +70,23 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+    
             <button type="submit">Send</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
