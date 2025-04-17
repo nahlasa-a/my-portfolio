@@ -4,97 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nahla || Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Nahla Sayed Ahmad</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Nahla Sayed Ahmad</h1>
+            <p class="tagline">Computer Programming Student & Baking Enthusiast</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My name is Nahla, I am a first year Computer Programming & Analysis Student at Humber Polytechnic. I actually got a Business Diploma from Seneca Polytechnic in 2023, but I struggled for a while after graduating, as I felt lost when it came to deciding what I wanted to do career-wise. After some time, I started developing quite a new & exciting interest in web development, which was funny for me because I never thought I would be the type of person to be into anything related to computers, let alone coding! By the end of 2024, I made the decision to fully take on an academic career in computer programming, as well as start pursuing my professional career in it. 
-            Although I have been into computer programming for some time now, I would still consider myself a total beginner, as I am not that advanced in the self-taught phase of things. So far, I have worked on a few projects in algorithms, database design, computer operating systems, and some web programming & development.
-            When it comes to who I am outside of coding, I like to spend my time baking, cooking, reading, developing recipes, and creating social media content that mainly revolves around those hobbies of mine. 
-            I guess my favorite things to do in my free time is baking and coding!
-            </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project">
-                <h3>Client Registration Form</h3>
-                <img src="https://i.pinimg.com/736x/7b/06/f4/7b06f4bb3cda45e2273a06004b809968.jpg" alt="Project 1: Client Registration Form">
-                <p>I created a user registration form which allows the computer to suggest text answers, if the user information - such as contact information & address -  is saved on the computer.</p>
-                <button class="show-details" data-project="1">Show Details</button>
-                <div class="details" id="details-1">
-                    <p><strong>Technologies Used:</strong> HTML, CSS</p>
-                    <p><strong>Application Used:</strong> Visual Studio Code</p>
+    <main>
+        <section id="about">
+            <div class="section-container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! My name is Nahla, I am a first year Computer Programming & Analysis Student at Humber Polytechnic. I actually got a Business Diploma from Seneca Polytechnic in 2023, but I struggled for a while after graduating, as I felt lost when it came to deciding what I wanted to do career-wise.</p>
+                    <p>After some time, I started developing quite a new & exciting interest in web development, which was funny for me because I never thought I would be the type of person to be into anything related to computers, let alone coding! By the end of 2024, I made the decision to fully take on an academic career in computer programming, as well as start pursuing my professional career in it.</p>
+                    <p>Although I have been into computer programming for some time now, I would still consider myself a total beginner, as I am not that advanced in the self-taught phase of things. So far, I have worked on a few projects in algorithms, database design, computer operating systems, and some web programming & development.</p>
+                    <p>When it comes to who I am outside of coding, I like to spend my time baking, cooking, reading, developing recipes, and creating social media content that mainly revolves around those hobbies of mine.</p>
+                    <p class="highlight">I guess my favorite things to do in my free time is baking and coding!</p>
                 </div>
             </div>
+        </section>
 
-            <div class="project">
-                <h3>My Bakery Website</h3>
-                <img src="https://i.pinimg.com/736x/b4/95/5e/b4955eda031886ed0de166554108feba.jpg" alt="Project 2: Bakery Website">
-                <p>Built a basic website for my at-home bakery business. The website included a small introduction, sample menu gallery, and the business contact information.</p>
-                <button class="show-details" data-project="2">Show Details</button>
-                <div class="details" id="details-2">
-                    <p><strong>Technologies Used:</strong> HTML, CSS</p>
-                    <p><strong>Application Used:</strong> Visual Studio Code</p>
+        <section id="projects">
+            <div class="section-container">
+                <h2>My Projects</h2>
+                <div class="projects-container">
+                    <div class="project">
+                        <div class="project-card">
+                            <h3>Client Registration Form</h3>
+                            <img src="https://i.pinimg.com/736x/7b/06/f4/7b06f4bb3cda45e2273a06004b809968.jpg" alt="Project 1: Client Registration Form">
+                            <p>I created a user registration form which allows the computer to suggest text answers, if the user information - such as contact information & address - is saved on the computer.</p>
+                            <button class="show-details" data-project="1">Show Details</button>
+                            <div class="details" id="details-1">
+                                <p><strong>Technologies Used:</strong> HTML, CSS</p>
+                                <p><strong>Application Used:</strong> Visual Studio Code</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-card">
+                            <h3>My Bakery Website</h3>
+                            <img src="https://i.pinimg.com/736x/b4/95/5e/b4955eda031886ed0de166554108feba.jpg" alt="Project 2: Bakery Website">
+                            <p>Built a basic website for my at-home bakery business. The website included a small introduction, sample menu gallery, and the business contact information.</p>
+                            <button class="show-details" data-project="2">Show Details</button>
+                            <div class="details" id="details-2">
+                                <p><strong>Technologies Used:</strong> HTML, CSS</p>
+                                <p><strong>Application Used:</strong> Visual Studio Code</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-card">
+                            <h3>Interactive Quiz - Baking</h3>
+                            <img src="https://i.pinimg.com/736x/1a/25/10/1a251079859fe435e820fb1f355ad6e4.jpg" alt="Project 3: Interactive quiz - baking">
+                            <p>Created an interactive quiz which quizzes the user on baking related topics, such as dough lamination, flour types, and geographical facts regarding pastries.</p>
+                            <button class="show-details" data-project="3">Show Details</button>
+                            <div class="details" id="details-3">
+                                <p><strong>Technologies Used:</strong> HTML</p>
+                                <p><strong>Application Used:</strong> Visual Studio Code</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        <div class="project">
-            <h3>Interactive Quiz - Baking</h3>
-            <img src="https://i.pinimg.com/736x/1a/25/10/1a251079859fe435e820fb1f355ad6e4.jpg" alt="Project 3: Interactive quiz - baking">
-            <p>Created an interactive quiz which quizzes the user on baking related topics, such as dough lamination, flour types, and geographical facts regarding pastries.</p>
-            <button class="show-details" data-project="3">Show Details</button>
-            <div class="details" id="details-3">
-                <p><strong>Technologies Used:</strong> HTML</p>
-                <p><strong>Application Used:</strong> Visual Studio Code</p>
+        <section id="contact">
+            <div class="section-container">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+            
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-            </div>
-    
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Nahla Sayed Ahmad</p>
+        <p>&copy; 2025 Nahla Sayed Ahmad. All rights reserved.</p>
     </footer>
 </body>
 </html>
