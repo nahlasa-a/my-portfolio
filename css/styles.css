@@ -267,35 +267,36 @@ main {
     flex: 1;
 }
 
-.details {
-    display: none;
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: var(--pastel-green);
-    border-radius: 8px;
-    border-left: 4px solid var(--dark-green);
-}
-
-.details.visible {
-    display: block;
-}
-
 .show-details {
-    padding: 0.8rem 1.5rem;
-    background-color: var(--dark-green);
+    padding: 0.7rem 1.2rem;
+    background-color: var(--button-bg);
     color: white;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-size: 1rem;
-    transition: var(--transition);
-    margin-top: auto;
+    transition: background-color 0.3s ease;
     align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .show-details:hover {
-    background-color: var(--pastel-pink);
-    color: var(--dark-green);
+    background-color: var(--button-hover);
+}
+
+.details {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+}
+
+.details p {
+    margin: 0.5rem;
 }
 
 .contact-form {
