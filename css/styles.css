@@ -183,26 +183,6 @@ main {
     flex: 2;
 }
 
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.image-placeholder {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    font-size: 3rem;
-    box-shadow: var(--shadow);
-}
-
 .skills {
     margin-top: 2rem;
 }
