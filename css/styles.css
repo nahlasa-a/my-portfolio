@@ -2,18 +2,23 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--pastel-green);
-    color: var(--text-dark);
-    line-height: 1.7;
-    font-size: 18px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-yellow));
-    color: var(--dark-green);
+    background: var(--header-bg);
+    color: white;
     text-align: center;
     padding: 2rem 1rem;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .header-content {
@@ -21,19 +26,17 @@ header {
     margin: 0 auto;
 }
 
-.tagline {
-    font-style: italic;
-    margin: 0.5rem 0 1.5rem;
-    color: var(--dark-green);
-    font-size: 1.2rem;
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease;
 }
 
-footer {
-    background-color: var(--dark-green);
-    color: var(--text-light);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+.tagline {
+    font-style: italic;
+    opacity: 0.9;
+    color: var(--dark-green);
+    font-size: 1.2rem;
 }
 
 nav ul {
@@ -225,6 +228,14 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--pastel-pink);
     color: var(--dark-green);
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
 }
 
 @keyframes fadeIn {
