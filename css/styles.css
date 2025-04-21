@@ -213,40 +213,58 @@ main {
 }
 
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 1rem;
     gap: 2rem;
 }
 
 .project {
-    flex: 1 1 300px;
-    max-width: 350px;
-}
-
-.project-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.project:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.project img {
-    width: 100%;
+.project-image {
     height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.project p {
     margin-bottom: 1rem;
+    flex: 1;
 }
 
 .details {
