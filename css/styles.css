@@ -185,6 +185,33 @@ main {
     font-weight: 500;
 }
 
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--button-bg);
+    color: white;
+    border-color: var(--button-bg);
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
