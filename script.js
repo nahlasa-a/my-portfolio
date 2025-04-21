@@ -20,9 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const projectID = button.getAttribute('data-project');
             const details = document.getElementById(`details-${projectID}`);
-            
-            details.classList.toggle('visible');
-            button.textContent = details.classList.contains('visible') ? 'Hide Details' : 'Show Details';
+            const icon = button.querySelector('i');
+
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+                button.innerHTML = 'Hide Details <i class="fas fa-chevron-up"></i>';
+                details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                details.style.display = 'none';
+                button.innerHTML = 'Show Details <i class="fas fa-chevron-down"></i>';
+            }
         });
     }); 
     
