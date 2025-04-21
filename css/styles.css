@@ -99,46 +99,90 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-.section-container {
-    background-color: white;
-    border-radius: 10px;
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section {
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section h2 i {
+    color: var(--header-bg);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 3rem;
     box-shadow: var(--shadow);
 }
 
-h1, h2, h3 {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    color: var(--dark-green);
+.skills {
+    margin-top: 2rem;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--soft-pink);
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: var(--dark-green);
-    margin-bottom: 1rem;
-}
-
-.about-content p {
-    margin-bottom: 1.2rem;
-}
-
-.highlight {
-    background-color: var(--pastel-yellow);
-    padding: 1rem;
-    border-left: 4px solid var(--dark-green);
-    font-style: italic;
+.skill-tag {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .projects-container {
