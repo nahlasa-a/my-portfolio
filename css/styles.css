@@ -1,3 +1,42 @@
+:root {
+    /* Light theme colors */
+    --primary-color: #FFD6E0; /* Pastel pink */
+    --secondary-color: #C1F7D5; /* Pastel green */
+    --accent-color: #FFEEB3; /* Pastel yellow */
+    --text-color: #333333;
+    --background-color: #F9F9F9;
+    --card-bg: #FFFFFF;
+    --header-bg: #FFB3C6; /* Slightly darker pink */
+    --footer-bg: #A5D8D4; /* Pastel teal */
+    --button-bg: #FFB3C6;
+    --button-hover: #FF8FAB;
+    --border-color: #E0E0E0;
+    --link-color: #4A6FA5;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    --primary-color: #3A2E39;
+    --secondary-color: #2D3A3A;
+    --accent-color: #4A3E3A;
+    --text-color: #E0E0E0;
+    --background-color: #1A1A1A;
+    --card-bg: #2A2A2A;
+    --header-bg: #4A2E39;
+    --footer-bg: #2D3A3A;
+    --button-bg: #4A3E3A;
+    --button-hover: #5A4E4A;
+    --border-color: #3A3A3A;
+    --link-color: #7AA6DA;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
