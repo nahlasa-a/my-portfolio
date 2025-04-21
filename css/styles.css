@@ -1,13 +1,12 @@
 :root {
-    /* Light theme colors */
-    --primary-color: #FFD6E0; /* Pastel pink */
-    --secondary-color: #C1F7D5; /* Pastel green */
-    --accent-color: #FFEEB3; /* Pastel yellow */
+    --primary-color: #FFD6E0; 
+    --secondary-color: #C1F7D5; 
+    --accent-color: #FFEEB3; 
     --text-color: #333333;
     --background-color: #F9F9F9;
     --card-bg: #FFFFFF;
-    --header-bg: #FFB3C6; /* Slightly darker pink */
-    --footer-bg: #A5D8D4; /* Pastel teal */
+    --header-bg: #FFB3C6; 
+    --footer-bg: #A5D8D4; 
     --button-bg: #FFB3C6;
     --button-hover: #FF8FAB;
     --border-color: #E0E0E0;
@@ -470,13 +469,31 @@ footer {
     transform: translateY(-3px);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-section {
-    animation: fadeIn 0.6s ease-out forwards;
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width: 768px) {
