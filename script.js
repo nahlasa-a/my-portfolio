@@ -33,6 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }); 
     
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            projects.forEach(project => {
+                if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                    project.style.display = 'flex';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+
     const form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', (event) => {
@@ -65,19 +85,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 message.placeholder = 'Please enter your message';
             } else {
                 message.classList.remove('error');
+                message.placeholder = 'Your message...';
             }
             
             if (isValid) {
-                form.reset();
-                alert('Thank you for your message! I will get back to you soon.');
+                const submitBtn = form.querySelector('.submit-btn');
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.classList.add('success');
+                
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                    submitBtn.classList.remove('success');
+                }, 2000);
             }
         });
         
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('input', () => {
-                input.classList.remove('error');
+        const animateOnScroll = () => {
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('fade-in-visible');
+                }
             });
-        });
+        };
+    
+        animateOnScroll();
+        
+        window.addEventListener('scroll', animateOnScroll);
+    
+        const lazyLoadImages = () => {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            lazyImages.forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight + 100) {
+                    img.src = img.getAttribute('data-src') || img.src;
+                    img.removeAttribute('loading');
+                }
+            });
+        };
+    
+        lazyLoadImages();
+        
+        window.addEventListener('scroll', lazyLoadImages);
     }
 });
